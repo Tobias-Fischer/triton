@@ -44,7 +44,7 @@ def _build(name, src, srcdir):
     else:
         cuda_lib_dirs = libcuda_dirs()
         base_dir = os.path.join(os.path.dirname(__file__), os.path.pardir)
-        cuda_path = os.path.join(base_dir, "third_party", "cuda")
+        cuda_path = os.environ["CUDA_HOME"]
 
         cu_include_dir = os.path.join(cuda_path, "include")
         triton_include_dir = os.path.join(os.path.dirname(__file__), "include")
